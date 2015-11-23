@@ -8,6 +8,9 @@
 				"artifactsBaseUrl": "BXXase URL of the Publisher Template gallery package"
 			}
 		},
+		"Test2" : {
+			"type": "string"
+		}
     },
     "variables": { },
     "resources": [ ],
@@ -15,6 +18,10 @@
         "baseURL": {
             "type": "string",
             "value": "parameters('artifactsBaseUrl')
+        },
+        "Test2": {
+            "type": "string",
+            "value": "parameters('Test2')
         }
     }    
 }
