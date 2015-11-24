@@ -1,0 +1,36 @@
+{
+    "handler": "Microsoft.Compute.MultiVm",
+    "version": "0.0.1-preview",
+    "parameters": {
+        "basics": [
+            {
+                "name": "LicenseType",
+                "type": "Microsoft.Common.DropDown",
+                "label": "Edition",
+                "defaultValue": "M3",
+                "toolTip": "license edition for this deployment)",
+                "constraints": {
+                    "allowedValues": [
+                        {
+                            "label": "M3",
+                            "value": "M3"
+                        },
+                        {
+                            "label": "M5",
+                            "value": "M5"
+                        },
+                        {
+                            "label": "M7",
+                            "value": "M7"
+                        }
+                    ]
+                }
+            }
+        ],
+        "steps": [ ],
+        "outputs": {
+            "location": "[location()]",
+            "license": "[basics('LicenseType')]"
+        }
+    }
+}
